@@ -1,18 +1,10 @@
-module one_bit_adder(s,c_out,a,b, c_out);
+module one_bit_adder (a,b,c,sum,carry);
 
-    //Taking the input
-    input c_in,
-    input a,
-    input b,
+input a, b, c;
+output sum, carry;
+wire sum, carry;
 
-    //Taking the input
-    output c_out,
-    wire c_out,
-    output sum,
-    wire sum;
+assign sum = a^b^c;
+assign carry = ((a&b)|(b&c)|(c&a));
     
-    //Using the combinational logic
-    assign sum=a^b^c_in;
-    assign c_out= (a&b)|(c_in&a)|(c_in&b); 
-
 endmodule
