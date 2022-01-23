@@ -1,5 +1,9 @@
-module comparator_1bit(a, b, lin, ein, gin, less, equal, greater) (
-    input a,b,lin,ein,gin;
+module comparator_1bit(a, b, lin, ein, gin, less, equal, greater);
+    input a;
+    input b;
+    input lin;
+    input ein;
+    input gin;
 
     output less;
     wire less;
@@ -11,6 +15,5 @@ module comparator_1bit(a, b, lin, ein, gin, less, equal, greater) (
     assign less = lin|ein&~a&b;
     assign equal = ein&~(a^b);
     assign greater = gin|ein&a&~b; 
-);
     
 endmodule

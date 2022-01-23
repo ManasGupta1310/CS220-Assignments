@@ -1,6 +1,6 @@
-`include "comparator_1bit"
+`include "comparator_1bit.v"
 
-module comparator_8bit(x, y, lin, ein, gin, less, equal, greater) (
+module comparator_8bit(x, y, lin, ein, gin, less, equal, greater);
     input [7:0] x;
     input [7:0] y;
 
@@ -29,6 +29,4 @@ module comparator_8bit(x, y, lin, ein, gin, less, equal, greater) (
     comparator_1bit C1 (x[1], y[1], inter_less[1], inter_equal[1], inter_greater[1], inter_less[0], inter_equal[0], inter_greater[0]);
     comparator_1bit C0 (x[0], y[0], inter_less[0], inter_equal[0], inter_greater[0], less, equal, greater);
 
-);
-    
 endmodule
