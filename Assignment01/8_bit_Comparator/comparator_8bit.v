@@ -9,9 +9,12 @@ module comparator_8bit(x, y, lin, ein, gin, less, equal, greater) (
     input gin;
 
 
-    output wire less;
-    output wire equal;
-    output wire greater;
+    output less;
+    wire less;
+    output equal;
+    wire equal;
+    output greater;
+    wire greater;
 
     wire [6:0] inter_less;
     wire [6:0] inter_equal;
