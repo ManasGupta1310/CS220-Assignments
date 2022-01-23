@@ -1,5 +1,3 @@
-// `include "eight_bit_adder.v"
-
 module eight_bit_adder_test;
 
     reg [7:0] A;
