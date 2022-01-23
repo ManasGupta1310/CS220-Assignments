@@ -1,4 +1,4 @@
-`include "eight_bit_adder.v"
+// `include "eight_bit_adder.v"
 
 module eight_bit_adder_test;
 
@@ -12,7 +12,7 @@ module eight_bit_adder_test;
     eight_bit_adder ADDER (A, B, Cin, Carry, Sum);
 
     always @ (A or B or Cin or Sum or Carry) begin
-        $display("time = %d: A = %b, B = %b, Cin = %b, Sum = %b, Carry = %b",$time,A,B,Cin,Sum,Carry);
+        $display("A = %b, B = %b, Cin = %b, Sum = %b, Carry = %b",A,B,Cin,Sum,Carry);
     end
 
     initial begin
