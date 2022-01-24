@@ -1,4 +1,4 @@
-`include "dec_3to8.v"
+`include "A1Q3_dec_3to8.v"
 
 module dec_3to8_test;
     reg [2:0] a;
