@@ -1,4 +1,4 @@
-`include "comparator_8bit.v"
+`include "A1Q2_comparator_8bit.v"
 
 module comparator_8bit_test;
 
