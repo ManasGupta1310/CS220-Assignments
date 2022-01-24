@@ -1,17 +1,25 @@
-`include "dec_2to4.v"
-
 module dec_3to8(out,a,b,c,en); 
     
-    input a,b,c;
-    input en; 
+    //no extra gates have been used innthis implementation
+    input a,b,c,en; 
     output [7:0] out;
+    wire [3:0] in;
 
-    output [3:0] z;
-    wire [3:0] z;
+    dec_2to4 dec1(in,c,1'b1,e);
+    dec_2to4 dec2(out[3:0],b,a,in[1]);
+    dec_2to4 dec3(out[7:4],b,a,in[3]);
 
-    dec_2to4 dec1(z[0],z[1],z[2],z[3],c,0,en);
-    dec_2to4 dec2(out[0], out[1],out[2], out[3],a,b,z[0]);
-    dec_2to4 dec3(out[4], out[5],out[6], out[7],a,b,z[1]);
+endmodule
 
+
+module dec_2to4(y,a,b,en);
+    input a,b,en;
+
+    output[3:0] y;
+
+    assign y[0]= ~a & ~b & en;
+    assign y[1]= ~a & b & en;
+    assign y[2]= a & ~b & en;
+    assign y[3]= a & b & en;
     
 endmodule
