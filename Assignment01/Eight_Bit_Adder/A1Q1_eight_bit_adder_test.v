@@ -1,4 +1,4 @@
-`include "eight_bit_adder.v"
+`include "A1Q1_eight_bit_adder.v"
 
 module eight_bit_adder_test;
 
