@@ -1,4 +1,4 @@
-`include "comparator_1bit.v"
+`include "A1Q2_comparator_1bit.v"
 
 module comparator_8bit(x, y, lin, ein, gin, less, equal, greater);
     input [7:0] x;
