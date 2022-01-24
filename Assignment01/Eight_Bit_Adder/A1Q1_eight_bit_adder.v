@@ -1,4 +1,4 @@
-`include "one_bit_adder.v"
+`include "A1Q1_one_bit_adder.v"
 
 module eight_bit_adder (  input [7:0] a, input [7:0] b, input c_in,  output c_out,  output [7:0] sum);  
    
