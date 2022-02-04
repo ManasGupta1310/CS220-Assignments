@@ -2,12 +2,12 @@
 
 module TestModule;
     // Inputs
-    reg [3:0] a;
-    reg [3:0] b;
+    reg [7:0] a;
+    reg [7:0] b;
     reg cin;
 
     // Outputs
-    wire [3:0] sum;
+    wire [7:0] sum;
     wire cout;
 
     // Instantiate the cla_adder
