@@ -11,7 +11,9 @@ module cla_adder(a,b,cin,sum,cout);
 
     //  The formula for carry out in any iteration will be ===>  cout[i]=(a[i]&b[i]) + (xor(a[i],b[i])&cin[i-1])
                                             // For any i ===> cin[i]=cout[i-1]
+    // The sum at any iter will ===> sum[i]=xor(p[i],c[i-1]
 
+    
     assign p0=(a[0]^b[0]);  // We assign the propagators the value: p[i]=xor(a[i], b[i])
     assign p1=(a[1]^b[1]);
     assign p2=(a[2]^b[2]);
@@ -34,5 +36,5 @@ module cla_adder(a,b,cin,sum,cout);
     sum[3]=p3^c2;
 
     assign cout=c3;
-    
+
 endmodule
