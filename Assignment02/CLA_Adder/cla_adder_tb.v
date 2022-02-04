@@ -14,7 +14,7 @@ module TestModule;
     cla_adder adder (.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
 
     always @ (a or b or cin or sum or cout) begin
-        $display("time = %d: A = %b, B = %b, Cin = %b, Sum = %b, Carry = %b",$time,a,b,cin,sum,carry);
+        $display("time = %d: a = %b, b = %b, cin = %b, Sum = %b, Carry = %b",$time,a,b,cin,sum,cout);
     end
 
     initial begin
@@ -23,49 +23,49 @@ module TestModule;
     end
 
     initial begin
-        A = 1; B = 1; Cin = 0;
+        a = 1; b = 1; cin = 0;
         #5 
         $display("\n");
-        A = 100; B = 100; Cin = 1;
+        a = 100; b = 100; cin = 1;
         #5 
         $display("\n");
-        A = 30; B = 16; Cin = 1;
+        a = 30; b = 16; cin = 1;
         #5
         $display("\n");
-        A = 26; B = 5; Cin = 1;
+        a = 26; b = 5; cin = 1;
         #5
         $display("\n");
-        A = 32; B = 32; Cin = 0;
+        a = 32; b = 32; cin = 0;
         #5
         $display("\n");
-        A = 43; B = 4; Cin = 1;
+        a = 43; b = 4; cin = 1;
         #5
         $display("\n");
-        A = 65; B = 43; Cin = 0;
+        a = 65; b = 43; cin = 0;
         #5
         $display("\n");
-        A = 64; B = 64; Cin = 1;
+        a = 64; b = 64; cin = 1;
         #5
         $display("\n");
-        A = 105; B = 220; Cin = 0;
+        a = 105; b = 220; cin = 0;
         #5
         $display("\n");
-        A = 128; B = 96; Cin = 1;
+        a = 128; b = 96; cin = 1;
         #5
         $display("\n");
-        A = 100; B = 96; Cin = 0;
+        a = 100; b = 96; cin = 0;
         #5
         $display("\n");
-        A = 128; B = 96; Cin = 0;
+        a = 128; b = 96; cin = 0;
         #5
         $display("\n");
-        A = 128; B = 128; Cin = 0;
+        a = 128; b = 128; cin = 0;
         #5
         $display("\n");
-        A = 28; B = 96; Cin = 1;
+        a = 28; b = 96; cin = 1;
         #5
         $display("\n");
-        A = 32; B = 128; Cin = 0;
+        a = 32; b = 128; cin = 0;
     end
-    
+
 endmodule
