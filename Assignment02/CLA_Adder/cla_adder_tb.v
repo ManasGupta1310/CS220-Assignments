@@ -26,46 +26,46 @@ module TestModule;
         a = 1; b = 1; cin = 0;
         #5 
         $display("\n");
-        a = 100; b = 100; cin = 1;
+        a = 4; b = 10; cin = 1;
         #5 
         $display("\n");
-        a = 30; b = 16; cin = 1;
+        a = 5; b = 9; cin = 1;
         #5
         $display("\n");
-        a = 26; b = 5; cin = 1;
+        a = 6; b = 5; cin = 1;
         #5
         $display("\n");
-        a = 32; b = 32; cin = 0;
+        a = 2; b = 3; cin = 0;
         #5
         $display("\n");
-        a = 43; b = 4; cin = 1;
+        a = 4; b = 4; cin = 1;
         #5
         $display("\n");
-        a = 65; b = 43; cin = 0;
+        a = 5; b = 3; cin = 0;
         #5
         $display("\n");
-        a = 64; b = 64; cin = 1;
+        a = 1; b = 14; cin = 1;
         #5
         $display("\n");
-        a = 105; b = 220; cin = 0;
+        a = 10; b = 2; cin = 0;
         #5
         $display("\n");
-        a = 128; b = 96; cin = 1;
+        a = 8; b = 6; cin = 1;
         #5
         $display("\n");
-        a = 100; b = 96; cin = 0;
+        a = 10; b = 1; cin = 0;
         #5
         $display("\n");
-        a = 128; b = 96; cin = 0;
+        a = 12; b = 3; cin = 0;
         #5
         $display("\n");
-        a = 128; b = 128; cin = 0;
+        a = 11; b = 1; cin = 0;
         #5
         $display("\n");
-        a = 28; b = 96; cin = 1;
+        a = 4; b = 7; cin = 1;
         #5
         $display("\n");
-        a = 32; b = 128; cin = 0;
+        a = 1; b = 1; cin = 0;
     end
 
 endmodule
