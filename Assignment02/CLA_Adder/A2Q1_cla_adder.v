@@ -7,7 +7,7 @@ module cla_adder(a,b,cin,sum,cout);
 
     wire p0,p1,p2,p3,p4,p5,p6,p7;   // p stands for the carry out propagator 
     wire g0,g1,g2,g3,g4,g5,g6,g7;   // g stands for the carry out generator
-    wire c0,c1,c2,c3,g4,c5,c6,c7;   // c stands for the intermediate carry outs
+    wire c0,c1,c2,c3,c4,c5,c6,c7;   // c stands for the intermediate carry outs
 
     //  The formula for carry out in any iteration will be ===>  cout[i]=(a[i]&b[i]) + (xor(a[i],b[i])&cin[i-1])
                                             // For any i ===> cin[i]=cout[i-1]

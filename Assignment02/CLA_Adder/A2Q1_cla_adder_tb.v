@@ -1,4 +1,4 @@
-`include "cla_adder.v"
+`include "A2Q1_cla_adder.v"
 
 module TestModule;
     // Inputs
