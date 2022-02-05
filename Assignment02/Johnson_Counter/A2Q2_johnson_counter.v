@@ -1,13 +1,15 @@
-module A2Q2_johnson_counter(rst, clk, Q);
+module A2Q2_johnson_counter(rst, clk, q);
 
-    input rst, clk;
-    output[7:0] Q;
-    reg [7:0] Q;
-    always @(negedge rst or posedge clk)
+    input rst, clk;        // Taking inputs
+    output[7:0] q;         // Initialisng a 8 bit output
+    reg [7:0] q;
+
+    always @(negedge rst or posedge clk)    // At positive clock edge or negative reset edge, perform the operation
+
     if(!rst)
-    Q <= 0;
+        q <= 0; // Giving q the value 0 asynchronously if rst=0
     else
-    Q <= {{Q[6:0]},{~Q[7]}};
+        q <= {{q[6:0]},{~q[7]}};
 
 endmodule
 
