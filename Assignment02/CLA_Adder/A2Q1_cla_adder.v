@@ -33,13 +33,13 @@ module cla_adder(a,b,cin,sum,cout);
     assign g7=(a[7]&b[7]);
 
     assign c0=g0|(p0&cin);  // We assign the intermediate carry outs the value from the formula
-    assign c1=g1|(p1&c0);   // c1=g1|(p1&g0)|(p1&p0&cin);
-    assign c2=g2|(p2&c1);   // c2=g2|(p2&g1)|(p2&p1&g0)|(p1&p1&p0&cin);
-    assign c3=g3|(p3&c2);   // c3=g3|(p3&g2)|(p3&p2&g1)|(p3&p2&p1&g0)|(p3&p2&p1&p0&cin);
-    assign c4=g4|(p4&c3);   // Similarly...
-    assign c5=g5|(p5&c4);
-    assign c6=g6|(p6&c5);
-    assign c7=g7|(p7&c6);
+    assign c1=g1|(p1&g0)|(p1&p0&cin);
+    assign c2=g2|(p2&g1)|(p2&p1&g0)|(p2&p1&p0&cin);
+    assign c3=g3|(p3&g2)|(p3&p2&g1)|(p3&p2&p1&g0)|(p3&p2&p1&p0&cin);
+    assign c4=g4|(p4&g3)|(p4&p3&g2)|(p4&p3&p2&g1)|(p4&p3&p2&p1&g0)|(p4&p3&p2&p1&p0&cin);
+    assign c5=g5|(p5&g4)|(p5&p4&g3)|(p5&p4&p3&g2)|(p5&p4&p3&p2&g1)|(p5&p4&p3&p2&p1&g0)|(p5&p4&p3&p2&p1&p0&cin);
+    assign c6=g6|(p6&p5)|(p6&p5&g4)|(p6&p5&p4&g3)|(p6&p5&p4&p3&g2)|(p6&p5&p4&p3&p2&g1)|(p6&p5&p4&p3&p2&p1&g0)|(p6&p5&p4&p3&p2&p1&p0&cin);
+    assign c7=g7|(p7&p6)|(p7&p6&g5)|(p7&p6&p5&g4)|(p7&p6&p5&p4&g3)|(p7&p6&p5&p4&p3&g2)|(p7&p6&p5&p4&p3&p2&g1)|(p7&p6&p5&p4&p3&p2&p1&g0)|(p7&p6&p5&p4&p3&p2&p1&p0&cin);
 
     assign sum[0]=p0^cin,
     sum[1]=p1^c0,
