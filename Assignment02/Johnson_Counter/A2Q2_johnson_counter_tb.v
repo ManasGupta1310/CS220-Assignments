@@ -1,7 +1,7 @@
-module johnsontstbnch;
+module A2Q2_johnson_counter_tb;
 reg rst,clk;
 wire [7:0]q;
-johnson jon (rst,clk,q);
+A2Q2_johnson_counter jon (rst,clk,q);
 
 initial
 begin

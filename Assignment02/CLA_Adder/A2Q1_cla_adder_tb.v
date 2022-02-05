@@ -1,6 +1,6 @@
 `include "A2Q1_cla_adder.v"
 
-module TestModule;
+module A2Q1_cla_adder_tb;
     // Inputs
     reg [7:0] a;
     reg [7:0] b;
@@ -11,7 +11,7 @@ module TestModule;
     wire cout;
 
     // Instantiate the cla_adder
-    cla_adder adder (.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
+    A2Q1_cla_adder adder (.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
 
     always @ (a or b or cin or sum or cout) begin
         $display("time = %d: a = %b, b = %b, cin = %b, Sum = %b, Carry = %b",$time,a,b,cin,sum,cout);

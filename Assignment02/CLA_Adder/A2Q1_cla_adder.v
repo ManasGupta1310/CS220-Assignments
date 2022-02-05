@@ -1,4 +1,4 @@
-module cla_adder(a,b,cin,sum,cout);
+module A2Q1_cla_adder(a,b,cin,sum,cout);
     input[7:0] a,b;     // a and b are 4bit inputs
     input cin;          // Carry in
     output [7:0] sum;   // Final Sum
