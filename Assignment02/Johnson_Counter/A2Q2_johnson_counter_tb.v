@@ -14,12 +14,12 @@ always #1 clk = ~clk;
     clk=0; 
     rst=0;  
   
-    $monitor ("Time=%0t     Output=%b", $time, q);     // Displaying the output
+    $monitor ("Time=%0t Reset=%b Clock=%b Output=%b", $time, rst,clk,q);     // Displaying the output
 
-    repeat (1) @(posedge clk);  
+    repeat (1) @(posedge clk);  // Running the block once
     rst = 1;  // Setting the reset to 1
-    repeat (15) @(posedge clk);  
-    $finish;  
+    repeat (14) @(posedge clk);  // Running the code 14 times with rst=1
+    #3 $finish;  
     
   end  
 
