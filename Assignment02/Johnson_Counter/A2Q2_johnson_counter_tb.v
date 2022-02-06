@@ -14,7 +14,7 @@ always #1 clk = ~clk;
     clk=0; 
     rst=0;  
   
-    $monitor ("Time=%0t Reset=%b Clock=%b Output=%b", $time, rst,clk,q);     // Displaying the output
+    $monitor ("Time=%0t Output=%b", $time,q);     // Displaying the output
 
     repeat (1) @(posedge clk);  // Running the block once
     rst = 1;  // Setting the reset to 1

@@ -9,7 +9,7 @@ module A2Q2_johnson_counter(rst, clk, q);
     if(!rst)
         q <= 0; // Giving q the value 0 asynchronously if rst=0
     else
-        q <= {{q[6:0]},{~q[7]}};
+        q <= {{~q[0]},{q[7:1]}};
 
 endmodule
 
