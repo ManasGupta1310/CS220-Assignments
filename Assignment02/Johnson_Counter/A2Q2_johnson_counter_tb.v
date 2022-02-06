@@ -10,7 +10,7 @@ A2Q2_johnson_counter johnson_count (rst,clk,q);     // Declaring the counter
 always #1 clk = ~clk;  
   
   initial begin  
-      //Initilaising clock and reset to 1
+      //Initilaising clock and reset to 0
     clk=0; 
     rst=0;  
   
