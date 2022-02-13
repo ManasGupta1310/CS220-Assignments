@@ -1,12 +1,12 @@
 module seq1010_detect_tb;
     // Inputs
-    reg x;
+    reg in;
     reg clk;
     reg res;
 
     // Outputs
-    wire z;
-    seq1010_detect uut (.x(x), .clk(clk), .res(res), .z(z));
+    wire out;
+    seq1010_detect detector (in, clk, res, out);
     
 initial
     begin
@@ -18,10 +18,10 @@ initial
 always #5 clk = ~ clk;  
 
 initial begin
-        #12 x = 0;#10 x = 0 ; #10 x = 1 ; #10 x = 0 ;
-        #12 x = 1;#10 x = 1 ; #10 x = 0 ; #10 x = 1 ;
-        #12 x = 1;#10 x = 0 ; #10 x = 0 ; #10 x = 1 ;
-        #12 x = 0;#10 x = 1 ; #10 x = 1 ; #10 x = 0 ;
+        #12 in = 0;#10 in = 0 ; #10 in = 1 ; #10 in = 0 ;
+        #12 in = 1;#10 in = 1 ; #10 in = 0 ; #10 in = 1 ;
+        #12 in = 1;#10 in = 0 ; #10 in = 0 ; #10 in = 1 ;
+        #12 in = 0;#10 in = 1 ; #10 in = 1 ; #10 in = 0 ;
         #10 $finish;
     end
       

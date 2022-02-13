@@ -10,25 +10,28 @@
     else
         p_state <= n_state;
     
+
     //block for sequential output
     always @ (posedge clk or posedge res)
     if (res)
-        z <= 1'b0;
+        out <= 1'b0;
     else
-        if ((p_state==S3) && x)
-            z <= 1'b1;
+        if ((p_state==S3) && in)
+            out <= 1'b1;
         else
-            z <= 1'b0;
+            out <= 1'b0;
     
+
     //block of combinational assignment
     always @ (*)
     begin
         case(p_state)
-            S0 : n_state = x ? S1 : S0 ;
-            S1 : n_state = x ? S1 : S2 ;
-            S2 : n_state = x ? S3 : S0 ;
-            S3 : n_state = x ? S1 : S2 ;
+            S0 : n_state = in ? S1 : S0 ;
+            S1 : n_state = in ? S1 : S2 ;
+            S2 : n_state = in ? S3 : S0 ;
+            S3 : n_state = in ? S1 : S2 ;
         endcase
+
     $monitor(p_state);
     end
   
