@@ -1,4 +1,4 @@
-`include "gray_code_counter.v"
+`include "A4Q1_gray_code_counter.v"
 module graycounter_tb;
 
 reg clk = 0;
